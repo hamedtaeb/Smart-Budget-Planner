@@ -1,0 +1,92 @@
+{
+    "version": "1.0",
+    "description": "Scoring rules for Spending Personality classification. Derived from survey and spending behavior data.",
+    "features_used": [
+        "Income",
+        "TotalMnt",
+        "TotalPurchases",
+        "AvgMntPerPurchase",
+        "DealPurchaseRate",
+        "WebPurchaseShare",
+        "StorePurchaseShare"
+    ],
+    "rules": {
+        "Saver": {
+            "conditions": {
+                "Income": "< 40000",
+                "TotalMnt": "< 200",
+                "DealPurchaseRate": "> 0.20"
+            },
+            "description": "Low-income, budget-conscious shoppers. Prefer in-store shopping, moderate to high deal use, and make small, infrequent purchases.",
+            "cluster_match": [
+                0,
+                3
+            ],
+            "tips": [
+                "Focus on essential needs before discretionary spending.",
+                "Use digital coupons and loyalty programs to stretch your budget.",
+                "Track small expenses monthly to stay on goal."
+            ]
+        },
+        "Planner": {
+            "conditions": {
+                "Income": "40000\u201370000",
+                "TotalMnt": "200\u20131000",
+                "DealPurchaseRate": "0.10\u20130.20"
+            },
+            "description": "Balanced and mindful shoppers with moderate income. They plan purchases ahead, shop both online and in-store, and occasionally use deals.",
+            "cluster_match": [
+                1
+            ],
+            "tips": [
+                "Keep a monthly budget and track progress regularly.",
+                "Use a \u2018wishlist\u2019 before buying non-essentials.",
+                "Leverage cashback or reward programs."
+            ]
+        },
+        "Splurger": {
+            "conditions": {
+                "Income": "> 70000",
+                "TotalMnt": "> 1000",
+                "DealPurchaseRate": "< 0.10"
+            },
+            "description": "High-income, premium spenders who enjoy quality and convenience over discounts. They spend more per purchase and rarely seek deals.",
+            "cluster_match": [
+                2
+            ],
+            "tips": [
+                "Set aside a fixed percentage of income for luxury or leisure spending.",
+                "Automate savings before discretionary purchases.",
+                "Review annual expenses to identify overspending areas."
+            ]
+        },
+        "Impulse Buyer": {
+            "conditions": {
+                "DealPurchaseRate": "< 0.10",
+                "TotalPurchases": "> 20",
+                "WebPurchaseShare": "> 0.40"
+            },
+            "description": "Frequent online shoppers who make spontaneous purchases with little price comparison. Spend more impulsively across digital channels.",
+            "cluster_match": [],
+            "tips": [
+                "Wait 24 hours before major online purchases.",
+                "Unsubscribe from flash-sale notifications.",
+                "Use shopping lists to stay intentional."
+            ]
+        },
+        "Outlier": {
+            "conditions": {
+                "TotalPurchases": "<= 1",
+                "AvgMntPerPurchase": "> 1000"
+            },
+            "description": "Unique or one-time high-value purchase behavior. May represent data anomalies or luxury one-off buyers.",
+            "cluster_match": [
+                4
+            ],
+            "tips": [
+                "Review one-time purchases for necessity or long-term value.",
+                "Consider tracking recurring expenses instead of single events."
+            ]
+        }
+    }
+}

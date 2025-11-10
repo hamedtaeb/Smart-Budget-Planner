@@ -1,0 +1,65 @@
+{
+    "rules": {
+        "Saver": {
+            "description": "Deal-seeking, cautious spenders with modest income and low total sapend.",
+            "conditions": {
+                "DealPurchaseRate": "High",
+                "Income_level": [
+                    "Low",
+                    "Mid"
+                ]
+            }
+        },
+        "Splirger": {
+            "description": "High-income and high-spend individuals who rarely rely on deals.",
+            "conditions": {
+                "Income_level": "High",
+                "Spend_level": "High",
+                "Deal_level": [
+                    "Low",
+                    "Mid"
+                ]
+            }
+        },
+        "Impulse Buyer": {
+            "description": "Spntaneous, online-focused shoppers with high purchas frequency and low deal reliance.",
+            "conditions": {
+                "Online_level": "High",
+                "Deal_Level": "Low"
+            }
+        },
+        "Planner": {
+            "description": "Balanced, Thoughful spenders who plan purchases and engage with campaigns.",
+            "conditions": {
+                "Response_level": "High"
+            }
+        }
+    },
+    "features_bins": {
+        "Income": [
+            "Low",
+            "Mid",
+            "High"
+        ],
+        "TotalMnt": [
+            "Low",
+            "Mid",
+            "High"
+        ],
+        "DealPurchaseRate": [
+            "Low",
+            "Mid",
+            "High"
+        ],
+        "WebPurchaseShare": [
+            "Low",
+            "Mid",
+            "High"
+        ],
+        "CampaignsAccepted": [
+            "Low",
+            "Mid",
+            "High"
+        ]
+    }
+}
