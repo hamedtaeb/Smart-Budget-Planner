@@ -75,97 +75,87 @@
             ]
         }
     },
-    "Questions": [
+    const_data = [
         {
-        "question_1": "What is your approximate yearly income?",
-        "answers_1": [
-            {"option_1": "under $30k", "scores": {"planner": 3, "impulse": 0, "splurger": 0, "saver": 0 }},
-            {"option_2": "$30,000 - $50,000", "scores": {"planner": 2, "impulse": 1, "splurger": 0, "saver": 0}},
-            {"option_3": "$50,000 - $70,000", "scores": {"planner": 1, "impulse": 2, "splurger": 1, "saver": 1}},
-            {"option_4": "Over $70,000", "scores": {"planner": 0, "impulse": 3, "splurger": 3, "saver": 3}}
-        ]
-            },
+            question: "What is your approximate yearly income?",
+            answer: ["under $30k", "$30,000 - $50,000", "$50,000 - $70,000", "Over $70,000"],
+            planner: [3, 2, 1, 0],
+            impulse: [0, 1, 2, 3],
+            splurger:[0, 0, 1, 3],
+            saver: [0, 0, 1, 3],
+        },
         {
-        "question_2": "How much do you spend on average per shopping trip?",
-        "answers_2": [
-            {"option_1": "Under $20", "scores": {"planner": 3, "impulse": 0, "splurger": 0, "saver": 1 }},
-            {"option_2": "$20-40", "scores": {"planner": 2, "impulse": 2, "splurger": 0, "saver": 2}},
-            {"option_3": "$40-70", "scores": {"planner": 0, "impulse": 1, "splurger": 2, "saver": 3}},
-            {"option_4": "Over $70", "scores": {"planner": 0, "impulse": 0, "splurger": 3, "saver": 0}}
-        ]
-            },
+            question: "How much do you spend on average per shopping trip?",
+            answer: ["Under $20", "$20-40", "$40-70", "Over $70"],
+            planner: [3,2,0,0],
+            impulse: [0,2,1,0],
+            splurger: [0,0,2,3],
+            saver: [1,2,3,0]
+        },
         {
-        "question_3": "How many purchases do you make per month?",
-        "answers_3": [
-            {"option_1": "1-10 purchases", "scores": {"planner": 3, "impulse": 0, "splurger": 0, "saver": 1}},
-            {"option_2": "11-17 purchases", "scores": {"planner": 2, "impulse": 2, "splurger": 1, "saver": 2}},
-            {"option_3": "18-24 purchases", "scores": {"planner": 1, "impulse": 1, "splurger": 2, "saver": 3}},
-            {"option_4": "Over 24 purchases", "scores": {"planner": 0, "impulse": 0, "splurger": 3, "saver": 2}}
-        ]
-            },
+            question: "How many purchases do you make per month?",
+            answer: ["1-10 purchases", "11-17 purchases", "18-24 purchases","Over 24 purchases"],
+            planner: [3,2,1,0],
+            impulse: [0,2,1,0],
+            splurger: [0,1,2,3],
+            saver: [1,2,3,2],
+        },
         {
-        "question_4": "How often do you shop using coupons, discounts, or deals?",
-        "answers_4": [
-            {"option_1": "Rarely or never (0-10% of purchases)", "scores": {"planner": 0, "impulse": 3, "splurger": 3, "saver": 0}},
-            {"option_2": "Occasionally (10-20% of purchases)", "scores": {"planner": 2, "impulse": 2, "splurger": 2, "saver": 1}},
-            {"option_3": "Frequently (20-30% of purchases)", "scores": {"planner": 3, "impulse": 1, "splurger": 1, "saver": 2}},
-            {"option_4": "Almost always (over 30% of purchases)", "scores": {"planner": 1, "impulse": 0, "splurger": 0, "saver": 3}}
-        ]
-            },
+            question: "How often do you shop using coupons, discounts, or deals?",
+            answer: ["Rarely or never (0-10% of purchases)", "Occasionally (10-20% of purchases)", "Frequently (20-30% of purchases)", "Almost always (over 30% of purchases)"],
+            planner: [0,2,3,1],
+            impulse: [3,2,1,0],
+            splurger: [3,2,1,0],
+            saver: [0,1,2,3],
+        },
         {
-        "question_5": "What percentage of purchases do you make online?",
-        "answers_5": [
-            {"option_1": "Less than 20%", "scores": {"planner": 2, "impulse": 0, "splurger": 1, "saver": 3}},
-            {"option_2": "20-30%", "scores": {"planner": 3, "impulse": 1, "splurger": 2, "saver": 2}},
-            {"option_3": "30-40%", "scores": {"planner": 1, "impulse": 2, "splurger": 1, "saver": 1}},
-            {"option_4": "Over 40%", "scores": {"planner": 0, "impulse": 3, "splurger": 0, "saver": 0}}
-        ]
-            },
+            question: "What percentage of purchases do you make online?",
+            answer: ["Less than 20%", "20-30%", "30-40%", "Over 40%"],
+            planner: [2,3,1,0],
+            impulse: [0,1,2,3],
+            splurger: [1,2,1,0],
+            saver: [3,2,1,0],
+        },
         {
-        "question_6": "What percentage of your purchases do you make in physical stores?",
-        "answers_6": [
-            {"option_1": "Less than 30%", "scores": {"planner": 1, "impulse": 2, "splurger": 1, "saver": 3}},
-            {"option_2": "30-40%", "scores": {"planner": 2, "impulse": 3, "splurger": 2, "saver": 2}},
-            {"option_3": "40-50%", "scores": {"planner": 2, "impulse": 1, "splurger": 2, "saver": 1}},
-            {"option_4": "Over 50%", "scores": {"planner": 2, "impulse": 0, "splurger": 1, "saver": 0}}
-        ]
-            },
+            question: "What percentage of your purchases do you make in physical stores?",
+            answers: ["Less than 30%", "30-40%", "40-50%", "Over 50%"],
+            planner: [1,2,2,2],
+            impulse: [2,3,1,0],
+            splurger: [1,2,2,1],
+            saver: [3,2,1,0],
+        },
         {
-        "question_7": "How much would you say you spend on products per month?",
-        "answers_7": [
-            {"option_1": "Under $100", "scores": {"planner": 3, "impulse": 0, "splurger": 0, "saver": 0}},
-            {"option_2": "$100-500", "scores": {"planner": 2, "impulse": 1, "splurger": 0, "saver": 2}},
-            {"option_3": "$500-1,200", "scores": {"planner": 0, "impulse": 3, "splurger": 1, "saver": 3}},
-            {"option_4": "Over $1,200", "scores": {"planner": 0, "impulse": 2, "splurger": 3, "saver": 1}}
-        ]
-            },
+            question: "How much would you say you spend on products per month?",
+            answer: ["Under $100", "$100-500", "$500-1,200", "Over $1,200"],
+            planner: [3,2,0,0],
+            impulse: [0,1,3,2],
+            splurger: [0,0,1,3],
+            saver: [0,2,3,1],
+        },
         {
-        "question_8": "When shopping do you typically:...", 
-        "answers_8": [
-            {"option_1": "Buy many items with low prices?", "scores": {"planner": 3, "impulse": 1, "splurger": 0, "saver": 1}},
-            {"option_2": "Buy a moderate number of moderately-priced items?", "scores": {"planner": 2, "impulse": 2, "splurger": 1, "saver": 2}},
-            {"option_3": "Buy fewer items at higher prices", "scores": {"planner": 0, "impulse": 1, "splurger": 3, "saver": 2}},
-            {"option_4": "Mix of all (depends on the situation)", "scores": {"planner": 1, "impulse": 2, "splurger": 2, "saver": 1}}
-        ]
-            },
+            question: "When shopping do you typically:...",
+            answer: ["Buy many items with low prices?", "Buy a moderate number of moderately-priced items?", "Buy fewer items at higher prices", "Mix of all (depends on the situation)"],
+            planner: [3,2,0,1],
+            impulse: [1,2,1,2],
+            splurger: [0,1,3,2],
+            saver: [1,2,2,1],
+        },
         {
-        "question_9": "How do you go about your shopping decisions?",
-        "answers_9": [
-            {"option_1": "I plan carefully and stick to my shopping list", "scores": {"planner": 3, "impulse": 0, "splurger": 0, "saver": 2}},
-            {"option_2": "I browse and buy things that catch my eye", "scores": {"planner": 0, "impulse": 3, "splurger": 1, "saver": 0}},
-            {"option_3": "I do thorough research and buy quality items", "scores": {"planner": 1, "impulse": 0, "splurger": 3, "saver": 1}},
-            {"option_4": "I wait for best deals before buying", "scores": {"planner": 2, "impulse": 0, "splurger": 0, "saver": 3}}
-        ]
-            },
+            question: "How do you go about your shopping decisions?",
+            answer: ["I plan carefully and stick to my shopping list", "I browse and buy things that catch my eye", "I do thorough research and buy quality items", "I wait for best deals before buying"],
+            planner: [3,0,1,2],
+            impulse: [0,3,0,0],
+            splurger: [0,1,3,0],
+            saver: [2,0,1,3],
+        },
         {
-        "question_10": "Which best describes your shopping frequency and style?",
-        "answers_10": [
-            {"option_1": "Frequent small purchases throughout the month", "scores": {"planner": 2, "impulse": 1, "splurger": 0, "saver": 3}},
-            {"option_2": "Regular purchases when I see what I like", "scores": {"planner": 1, "impulse": 3, "splurger": 1, "saver": 1}},
-            {"option_3": "Occasional large shopping trips", "scores": {"planner": 0, "impulse": 0, "splurger": 3, "saver": 0}},
-            {"option_4": "Mixture of frequent and occasional shopping habits", "scores": {"planner": 3, "impulse": 2, "splurger": 2, "saver": 2}}
-        ]
-            }
+            question: "Which best describes your shopping frequency and style?",
+            answer: ["Frequent small purchases throughout the month", "Regular purchases when I see what I like", "Occasional large shopping trips", "Mixture of frequent and occasional shopping habits"],
+            planner: [2,1,0,3],
+            impulse: [1,3,0,2],
+            splurger: [0,1,3,2],
+            saver: [3,1,0,2],
+        }
     ]
 }
 
