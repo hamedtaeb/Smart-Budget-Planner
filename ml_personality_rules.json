@@ -74,7 +74,7 @@
                 "Use shopping lists to stay intentional."
             ]
         },
-        "Outlier": {
+        "Unique Spender": {
             "conditions": {
                 "TotalPurchases": "<= 1",
                 "AvgMntPerPurchase": "> 1000"
