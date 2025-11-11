@@ -30,9 +30,9 @@
         },
         "Planner": {
             "conditions": {
-                "Income": "40000\u201370000",
-                "TotalMnt": "200\u20131000",
-                "DealPurchaseRate": "0.10\u20130.20"
+                "Income": "40000-70000",
+                "TotalMnt": "200-1000",
+                "DealPurchaseRate": "0.10-0.20"
             },
             "description": "Balanced and mindful shoppers with moderate income. They plan purchases ahead, shop both online and in-store, and occasionally use deals.",
             "cluster_match": [
@@ -40,7 +40,7 @@
             ],
             "tips": [
                 "Keep a monthly budget and track progress regularly.",
-                "Use a \u2018wishlist\u2019 before buying non-essentials.",
+                "Use a wishlist before buying non-essentials.",
                 "Leverage cashback or reward programs."
             ]
         },
