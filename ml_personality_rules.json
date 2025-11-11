@@ -74,20 +74,6 @@
                 "Use shopping lists to stay intentional."
             ]
         },
-        "Unique Spender": {
-            "conditions": {
-                "TotalPurchases": "<= 1",
-                "AvgMntPerPurchase": "> 1000"
-            },
-            "description": "Unique or one-time high-value purchase behavior. May represent data anomalies or luxury one-off buyers.",
-            "cluster_match": [
-                4
-            ],
-            "tips": [
-                "Review one-time purchases for necessity or long-term value.",
-                "Consider tracking recurring expenses instead of single events."
-            ]
-        }
     },
     "Questions": {
         [
